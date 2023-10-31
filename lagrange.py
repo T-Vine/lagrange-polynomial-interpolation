@@ -42,7 +42,7 @@ def e(poly, l, ax):
     ax.plot(x,y)
 
 #l = {1:2, 3:3, 2:3, 4:7, 5: 0, 3:3, 6:7} Deprecated testing values.
-def main(inp=0, pointsBool=False):
+def main(inp=0, pointsBool=False, othersBool=False):
     coordList = ""
     x = []
     y = []
@@ -68,7 +68,8 @@ def main(inp=0, pointsBool=False):
     for i,b in zip(lKeys, lValues):
         poly = li(i, lKeys)
         lPoly.append(str(b)+"*"+poly)
-        e(poly, lKeys, ax)
+        if othersBool:
+            e(poly, lKeys, ax)
 
     for i,b in zip(lPoly,lValues):
         newPoly += "("+i+")+"
@@ -76,5 +77,4 @@ def main(inp=0, pointsBool=False):
     e(lPoly, l, ax) 
     return lPoly
 
-main("1,2, 3,3, 2,3, 4,7, 5, 0, 3,3, 6,7", True)
-
+main("1,2, 3,3, 2,3, 4,7, 5, 0, 3,3, 6,7", True, True)
