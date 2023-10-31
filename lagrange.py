@@ -43,6 +43,15 @@ def e(poly, l, ax):
 
 #l = {1:2, 3:3, 2:3, 4:7, 5: 0, 3:3, 6:7} Deprecated testing values.
 def main(inp=0, pointsBool=False, othersBool=False):
+    """
+    Args:
+        inp (int, optional): list input for no-user programs. Defaults to 0.
+        pointsBool (bool, optional): shows inputted points on the graph. Defaults to False.
+        othersBool (bool, optional): shows other polynomials on the graph. Defaults to False.
+
+    Returns:
+        str: the Lagrange polynomial string for the points.
+    """
     coordList = ""
     x = []
     y = []
